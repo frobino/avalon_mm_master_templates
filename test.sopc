@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="test">
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element jtag_uart.avalon_jtag_slave
+   {
+      datum baseAddress
+      {
+         value = "0";
+         type = "long";
+      }
+   }
+   element block_dma
+   {
+      datum _sortIndex
+      {
+         value = "4";
+         type = "int";
+      }
+   }
+   element burst_dma
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element clk
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element cpu
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+      datum megawizard_uipreferences
+      {
+         value = "{}";
+         type = "String";
+      }
+   }
+   element simple_dma.csr
+   {
+      datum baseAddress
+      {
+         value = "64";
+         type = "long";
+      }
+   }
+   element pipelined_dma.csr
+   {
+      datum baseAddress
+      {
+         value = "32";
+         type = "long";
+      }
+   }
+   element burst_dma.csr
+   {
+      datum baseAddress
+      {
+         value = "16";
+         type = "long";
+      }
+   }
+   element block_dma.csr
+   {
+      datum baseAddress
+      {
+         value = "48";
+         type = "long";
+      }
+   }
+   element dst_ram
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+      datum megawizard_uipreferences
+      {
+         value = "{memorySize=Bytes}";
+         type = "String";
+      }
+   }
+   element cpu.jtag_debug_module
+   {
+      datum baseAddress
+      {
+         value = "2048";
+         type = "long";
+      }
+   }
+   element jtag_uart
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+      datum megawizard_uipreferences
+      {
+         value = "{}";
+         type = "String";
+      }
+   }
+   element pipelined_dma
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
+   element sdram.s1
+   {
+      datum baseAddress
+      {
+         value = "33554432";
+         type = "long";
+      }
+   }
+   element dst_ram.s1
+   {
+      datum baseAddress
+      {
+         value = "12288";
+         type = "long";
+      }
+   }
+   element src_ram.s1
+   {
+      datum baseAddress
+      {
+         value = "8192";
+         type = "long";
+      }
+   }
+   element sdram
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+      datum megawizard_uipreferences
+      {
+         value = "{}";
+         type = "String";
+      }
+   }
+   element simple_dma
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
+   element src_ram
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
+      }
+      datum megawizard_uipreferences
+      {
+         value = "{memorySize=Bytes}";
+         type = "String";
+      }
+   }
+   element test
+   {
+   }
+}
+]]></parameter>
+ <parameter name="deviceFamily" value="CYCLONEIII" />
+ <parameter name="generateLegacySim" value="true" />
+ <parameter name="hardcopyCompatible" value="false" />
+ <parameter name="hdlLanguage" value="VHDL" />
+ <parameter name="projectName" value="test.qpf" />
+ <parameter name="systemHash" value="-19983429157" />
+ <parameter name="timeStamp" value="1254216065187" />
+ <module name="clk" kind="clock_source" version="9.1" enabled="1">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+ </module>
+ <module name="cpu" kind="altera_nios2" version="9.1" enabled="1">
+  <parameter name="userDefinedSettings" value="" />
+  <parameter name="setting_showUnpublishedSettings" value="false" />
+  <parameter name="setting_showInternalSettings" value="false" />
+  <parameter name="setting_shadowRegisterSets" value="0" />
+  <parameter name="setting_preciseSlaveAccessErrorException" value="false" />
+  <parameter name="setting_preciseIllegalMemAccessException" value="false" />
+  <parameter name="setting_preciseDivisionErrorException" value="false" />
+  <parameter name="setting_performanceCounter" value="false" />
+  <parameter name="setting_perfCounterWidth" value="_32" />
+  <parameter name="setting_interruptControllerType" value="Internal" />
+  <parameter name="setting_illegalMemAccessDetection" value="false" />
+  <parameter name="setting_illegalInstructionsTrap" value="false" />
+  <parameter name="setting_fullWaveformSignals" value="false" />
+  <parameter name="setting_extraExceptionInfo" value="false" />
+  <parameter name="setting_exportPCB" value="false" />
+  <parameter name="setting_debugSimGen" value="false" />
+  <parameter name="setting_clearXBitsLDNonBypass" value="true" />
+  <parameter name="setting_branchPredictionType" value="Automatic" />
+  <parameter name="setting_bit31BypassDCache" value="true" />
+  <parameter name="setting_bigEndian" value="false" />
+  <parameter name="setting_bhtPtrSz" value="_8" />
+  <parameter name="setting_bhtIndexPcOnly" value="false" />
+  <parameter name="setting_avalonDebugPortPresent" value="false" />
+  <parameter name="setting_alwaysEncrypt" value="true" />
+  <parameter name="setting_allowFullAddressRange" value="false" />
+  <parameter name="setting_activateTrace" value="true" />
+  <parameter name="setting_activateTestEndChecker" value="false" />
+  <parameter name="setting_activateMonitors" value="true" />
+  <parameter name="setting_activateModelChecker" value="false" />
+  <parameter name="setting_HDLSimCachesCleared" value="true" />
+  <parameter name="setting_HBreakTest" value="false" />
+  <parameter name="resetSlave" value="sdram.s1" />
+  <parameter name="resetOffset" value="0" />
+  <parameter name="muldiv_multiplierType" value="EmbeddedMulFast" />
+  <parameter name="muldiv_divider" value="false" />
+  <parameter name="mpu_useLimit" value="false" />
+  <parameter name="mpu_numOfInstRegion" value="8" />
+  <parameter name="mpu_numOfDataRegion" value="8" />
+  <parameter name="mpu_minInstRegionSize" value="_12" />
+  <parameter name="mpu_minDataRegionSize" value="_12" />
+  <parameter name="mpu_enabled" value="false" />
+  <parameter name="mmu_uitlbNumEntries" value="_4" />
+  <parameter name="mmu_udtlbNumEntries" value="_6" />
+  <parameter name="mmu_tlbPtrSz" value="_7" />
+  <parameter name="mmu_tlbNumWays" value="_16" />
+  <parameter name="mmu_processIDNumBits" value="_10" />
+  <parameter name="mmu_enabled" value="false" />
+  <parameter name="mmu_autoAssignTlbPtrSz" value="true" />
+  <parameter name="mmu_TLBMissExcSlave" value="" />
+  <parameter name="mmu_TLBMissExcOffset" value="0" />
+  <parameter name="manuallyAssignCpuID" value="false" />
+  <parameter name="impl" value="Small" />
+  <parameter name="icache_size" value="_4096" />
+  <parameter name="icache_ramBlockType" value="Automatic" />
+  <parameter name="icache_numTCIM" value="_0" />
+  <parameter name="icache_burstType" value="None" />
+  <parameter name="exceptionSlave" value="sdram.s1" />
+  <parameter name="exceptionOffset" value="32" />
+  <parameter name="debug_triggerArming" value="true" />
+  <parameter name="debug_level" value="Level1" />
+  <parameter name="debug_jtagInstanceID" value="0" />
+  <parameter name="debug_embeddedPLL" value="true" />
+  <parameter name="debug_debugReqSignals" value="false" />
+  <parameter name="debug_assignJtagInstanceID" value="false" />
+  <parameter name="debug_OCIOnchipTrace" value="_128" />
+  <parameter name="dcache_size" value="_2048" />
+  <parameter name="dcache_ramBlockType" value="Automatic" />
+  <parameter name="dcache_omitDataMaster" value="false" />
+  <parameter name="dcache_numTCDM" value="_0" />
+  <parameter name="dcache_lineSize" value="_32" />
+  <parameter name="dcache_bursts" value="false" />
+  <parameter name="cpuReset" value="false" />
+  <parameter name="cpuID" value="0" />
+  <parameter name="breakSlave">cpu.jtag_debug_module</parameter>
+  <parameter name="breakOffset" value="32" />
+ </module>
+ <module
+   name="sdram"
+   kind="altera_avalon_new_sdram_controller"
+   version="9.1"
+   enabled="1">
+  <parameter name="TAC" value="5.5" />
+  <parameter name="TMRD" value="3" />
+  <parameter name="TRCD" value="20.0" />
+  <parameter name="TRFC" value="70.0" />
+  <parameter name="TRP" value="20.0" />
+  <parameter name="TWR" value="14.0" />
+  <parameter name="casLatency" value="3" />
+  <parameter name="columnWidth" value="8" />
+  <parameter name="dataWidth" value="32" />
+  <parameter name="generateSimulationModel" value="true" />
+  <parameter name="initNOPDelay" value="0.0" />
+  <parameter name="initRefreshCommands" value="2" />
+  <parameter name="masteredTristateBridgeSlave" value="" />
+  <parameter name="model">single_Micron_MT48LC2M32B2_7_chip</parameter>
+  <parameter name="numberOfBanks" value="4" />
+  <parameter name="numberOfChipSelects" value="1" />
+  <parameter name="pinsSharedViaTriState" value="false" />
+  <parameter name="powerUpDelay" value="100.0" />
+  <parameter name="refreshPeriod" value="15.625" />
+  <parameter name="registerDataIn" value="true" />
+  <parameter name="rowWidth" value="11" />
+ </module>
+ <module
+   name="jtag_uart"
+   kind="altera_avalon_jtag_uart"
+   version="9.1"
+   enabled="1">
+  <parameter name="allowMultipleConnections" value="false" />
+  <parameter name="hubInstanceID" value="0" />
+  <parameter name="readBufferDepth" value="64" />
+  <parameter name="readIRQThreshold" value="8" />
+  <parameter name="simInputCharacterStream" value="" />
+  <parameter name="simInteractiveOptions">INTERACTIVE_ASCII_OUTPUT</parameter>
+  <parameter name="useRegistersForReadBuffer" value="false" />
+  <parameter name="useRegistersForWriteBuffer" value="false" />
+  <parameter name="useRelativePathForSimFile" value="false" />
+  <parameter name="writeBufferDepth" value="64" />
+  <parameter name="writeIRQThreshold" value="8" />
+ </module>
+ <module name="burst_dma" kind="burst_example" version="1.2" enabled="1" />
+ <module
+   name="pipelined_dma"
+   kind="pipelined_read_example"
+   version="1.2"
+   enabled="1" />
+ <module
+   name="block_dma"
+   kind="block_transaction_example"
+   version="1.2"
+   enabled="1" />
+ <module name="simple_dma" kind="simple_example" version="1.2" enabled="1" />
+ <module
+   name="src_ram"
+   kind="altera_avalon_onchip_memory2"
+   version="9.1"
+   enabled="1">
+  <parameter name="allowInSystemMemoryContentEditor" value="false" />
+  <parameter name="blockType" value="AUTO" />
+  <parameter name="dataWidth" value="32" />
+  <parameter name="dualPort" value="false" />
+  <parameter name="initMemContent" value="true" />
+  <parameter name="initializationFileName" value="src_ram" />
+  <parameter name="instanceID" value="NONE" />
+  <parameter name="memorySize" value="1024" />
+  <parameter name="readDuringWriteMode" value="DONT_CARE" />
+  <parameter name="simAllowMRAMContentsFile" value="false" />
+  <parameter name="slave1Latency" value="1" />
+  <parameter name="slave2Latency" value="1" />
+  <parameter name="useNonDefaultInitFile" value="false" />
+  <parameter name="useShallowMemBlocks" value="false" />
+  <parameter name="writable" value="true" />
+ </module>
+ <module
+   name="dst_ram"
+   kind="altera_avalon_onchip_memory2"
+   version="9.1"
+   enabled="1">
+  <parameter name="allowInSystemMemoryContentEditor" value="false" />
+  <parameter name="blockType" value="AUTO" />
+  <parameter name="dataWidth" value="32" />
+  <parameter name="dualPort" value="false" />
+  <parameter name="initMemContent" value="true" />
+  <parameter name="initializationFileName" value="dst_ram" />
+  <parameter name="instanceID" value="NONE" />
+  <parameter name="memorySize" value="1024" />
+  <parameter name="readDuringWriteMode" value="DONT_CARE" />
+  <parameter name="simAllowMRAMContentsFile" value="false" />
+  <parameter name="slave1Latency" value="1" />
+  <parameter name="slave2Latency" value="1" />
+  <parameter name="useNonDefaultInitFile" value="false" />
+  <parameter name="useShallowMemBlocks" value="false" />
+  <parameter name="writable" value="true" />
+ </module>
+ <connection kind="clock" version="9.1" start="clk.clk" end="cpu.clk" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.instruction_master"
+   end="cpu.jtag_debug_module">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0800" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="cpu.jtag_debug_module">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0800" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk.clk" end="sdram.clk" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.instruction_master"
+   end="sdram.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x02000000" />
+ </connection>
+ <connection kind="avalon" version="6.1" start="cpu.data_master" end="sdram.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x02000000" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk.clk" end="jtag_uart.clk" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="jtag_uart.avalon_jtag_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0000" />
+ </connection>
+ <connection kind="interrupt" version="9.1" start="cpu.d_irq" end="jtag_uart.irq">
+  <parameter name="irqNumber" value="0" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk.clk" end="burst_dma.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="burst_dma.csr">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0010" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="burst_dma.read_master"
+   end="sdram.s1">
+  <parameter name="arbitrationPriority" value="32" />
+  <parameter name="baseAddress" value="0x02000000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="burst_dma.write_master"
+   end="sdram.s1">
+  <parameter name="arbitrationPriority" value="29" />
+  <parameter name="baseAddress" value="0x02000000" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk.clk" end="pipelined_dma.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="pipelined_dma.csr">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0020" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="pipelined_dma.read_master"
+   end="sdram.s1">
+  <parameter name="arbitrationPriority" value="32" />
+  <parameter name="baseAddress" value="0x02000000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="pipelined_dma.write_master"
+   end="sdram.s1">
+  <parameter name="arbitrationPriority" value="29" />
+  <parameter name="baseAddress" value="0x02000000" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk.clk" end="block_dma.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="block_dma.csr">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0030" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="block_dma.read_master"
+   end="sdram.s1">
+  <parameter name="arbitrationPriority" value="32" />
+  <parameter name="baseAddress" value="0x02000000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="block_dma.write_master"
+   end="sdram.s1">
+  <parameter name="arbitrationPriority" value="29" />
+  <parameter name="baseAddress" value="0x02000000" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk.clk" end="simple_dma.clock" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="cpu.data_master"
+   end="simple_dma.csr">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x0040" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="simple_dma.read_master"
+   end="sdram.s1">
+  <parameter name="arbitrationPriority" value="32" />
+  <parameter name="baseAddress" value="0x02000000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="simple_dma.write_master"
+   end="sdram.s1">
+  <parameter name="arbitrationPriority" value="32" />
+  <parameter name="baseAddress" value="0x02000000" />
+ </connection>
+ <connection kind="clock" version="9.1" start="clk.clk" end="src_ram.clk1" />
+ <connection kind="clock" version="9.1" start="clk.clk" end="dst_ram.clk1" />
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="simple_dma.read_master"
+   end="src_ram.s1">
+  <parameter name="arbitrationPriority" value="32" />
+  <parameter name="baseAddress" value="0x2000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="block_dma.read_master"
+   end="src_ram.s1">
+  <parameter name="arbitrationPriority" value="32" />
+  <parameter name="baseAddress" value="0x2000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="pipelined_dma.read_master"
+   end="src_ram.s1">
+  <parameter name="arbitrationPriority" value="32" />
+  <parameter name="baseAddress" value="0x2000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="burst_dma.read_master"
+   end="src_ram.s1">
+  <parameter name="arbitrationPriority" value="32" />
+  <parameter name="baseAddress" value="0x2000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="simple_dma.write_master"
+   end="dst_ram.s1">
+  <parameter name="arbitrationPriority" value="32" />
+  <parameter name="baseAddress" value="0x3000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="block_dma.write_master"
+   end="dst_ram.s1">
+  <parameter name="arbitrationPriority" value="29" />
+  <parameter name="baseAddress" value="0x3000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="pipelined_dma.write_master"
+   end="dst_ram.s1">
+  <parameter name="arbitrationPriority" value="29" />
+  <parameter name="baseAddress" value="0x3000" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="6.1"
+   start="burst_dma.write_master"
+   end="dst_ram.s1">
+  <parameter name="arbitrationPriority" value="29" />
+  <parameter name="baseAddress" value="0x3000" />
+ </connection>
+ <connection kind="avalon" version="6.1" start="cpu.data_master" end="src_ram.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x2000" />
+ </connection>
+ <connection kind="avalon" version="6.1" start="cpu.data_master" end="dst_ram.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x3000" />
+ </connection>
+</system>
